@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const tasks = JSON.parse(localStorage.getItem("tasks"));
-    setTasks(tasks);
+    setTasks(tasks || []);
   }, []);
 
   function addTask(name) {
@@ -22,7 +22,7 @@ function App() {
     });
   }
 
-  function uptdateTaskDone(taskIndex, newDone) {
+  function updateTaskDone(taskIndex, newDone) {
     setTasks((previous) => {
       const newTasks = [...previous];
       newTasks[taskIndex].done = newDone;
@@ -34,7 +34,7 @@ function App() {
     <main>
       <TaskForm onAdd={addTask} />
       {tasks.map((task, index) => (
-        <Task {...task} onToggle={(done) => uptdateTaskDone(index, done)} />
+        <Task {...task} onToggle={done => updateTaskDone(index, done)} />
       ))}
     </main>
   );

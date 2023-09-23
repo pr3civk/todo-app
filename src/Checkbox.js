@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export default function Checkbox({ defaultChecked = false}) {
+export default function Checkbox({ defaultChecked = false, onClick}) {
   const [checked, setChecked] = useState(defaultChecked);
   return (
-    <div>
+    <div className="checkbox" onClick={onClick}>
       {!checked ? (
         <div className="checkbox unchecked">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

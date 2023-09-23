@@ -21,11 +21,20 @@ function App() {
       return [...previous, { name: name, done: false }];
     });
   }
+
+  function uptdateTaskDone(taskIndex, newDone) {
+    setTasks((previous) => {
+      const newTasks = [...previous];
+      newTasks[taskIndex].done = newDone;
+      return newTasks;
+    });
+  }
+
   return (
     <main>
       <TaskForm onAdd={addTask} />
-      {tasks.map((task) => (
-        <Task {...task} />
+      {tasks.map((task, index) => (
+        <Task {...task} onToggle={(done) => uptdateTaskDone(index, done)} />
       ))}
     </main>
   );

@@ -33,7 +33,7 @@ form button {
   cursor: pointer;
 }
 
-input[type="checkbox"] {
+div.checkbox {
   cursor: pointer;
 }
 

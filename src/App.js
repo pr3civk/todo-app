@@ -30,11 +30,39 @@ function App() {
     });
   }
 
+  function removeTask(indexToRemove) {
+    setTasks((previous) => {
+      return previous.filter((taskObject, index) => index !== indexToRemove);
+    });
+  }
+
+  const numberCompletedTasks = tasks.filter((task) => task.done).length;
+  const numberTotalTasks = tasks.length;
+
+  function getMessage() {
+    const percentage = (numberCompletedTasks / numberTotalTasks) * 100;
+    if (percentage === 100) {
+      return "You did it! It's time to relax!";
+    }
+    else if (percentage === 0){
+      return "Come on! Try to do at least one task today!"
+    }
+    return "Keep it going!"
+  }
+
   return (
     <main>
+      <h1>
+        {numberCompletedTasks}/{numberTotalTasks} Tasks completed
+      </h1>
+      <h2>{getMessage()}</h2>
       <TaskForm onAdd={addTask} />
       {tasks.map((task, index) => (
-        <Task {...task} onToggle={done => updateTaskDone(index, done)} />
+        <Task
+          {...task}
+          onToggle={(done) => updateTaskDone(index, done)}
+          onTrash={() => removeTask(index)}
+        />
       ))}
     </main>
   );

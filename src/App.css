@@ -1,7 +1,36 @@
-body {
-  background-color: #36092d;
-  color: #ffffffcd;
+html {
+  width: 100%;
+  height: 100%;
 }
+
+@font-face {
+  font-family: orbitron;
+  src: url(../public/orbitron.ttf);
+}
+
+body {
+  background: linear-gradient(30deg,#020024,#36092d,#630a2fd3,#761239);
+  background-size: 240% 240%;
+  animation: gradient-animation 28s ease infinite;
+  color: #ffffffd2;
+  font-size: medium;
+  font-weight: bold;
+  font-family: orbitron;
+  
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,9 +41,10 @@ main {
 }
 
 form {
-  border: 2px solid #5a0f4b;
+  border: 2px solid #ffffffcd;
   border-radius: 10px;
   padding: 5px;
+  margin-bottom: 10px;
   display: flex;
 }
 
@@ -28,9 +58,15 @@ form input[type="text"] {
 }
 
 form button {
-  background-color: #ffffffcd;
-  border-radius: 7px;
+  background: none;
+  border: none;
   cursor: pointer;
+  display: flex;
+}
+
+form button svg {
+  fill: #ffffffcd;
+  height: 18px;
 }
 
 div.checkbox {
@@ -38,7 +74,7 @@ div.checkbox {
 }
 
 div.task {
-  background-color: #480c3c;
+  background-color: #4b133f;
   border-style: groove;
   border-color: #29082267;
   border-radius: 10px;
@@ -64,7 +100,6 @@ div.task.done {
 
 div.task span {
   position: relative;
-  
 }
 
 div.task span:before {
@@ -75,25 +110,36 @@ div.task span:before {
   background-color: #ffffffc7;
   position: absolute;
   top: 10px;
-  transition: width .3s linear;
+  transition: width 0.3s linear;
 }
 
 div.task-name {
-  flex-grow:1;
+  flex-grow: 1;
 }
 
-div.task.done span:before{
+div.task.done span:before {
   width: 100%;
 }
 
-button.trash-button{
+button.trash-button {
   background: none;
   border: none;
   cursor: pointer;
-
 }
 
 button.trash-button svg {
   fill: #ffffffcd;
   height: 14px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 33px;
+}
+
+h2 {
+  font-size: 20px;
 }

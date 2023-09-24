@@ -39,15 +39,61 @@ div.checkbox {
 
 div.task {
   background-color: #480c3c;
+  border-style: groove;
+  border-color: #29082267;
   border-radius: 10px;
   padding: 5px;
-  margin-top: 5px;
+  margin-top: 6px;
   margin-left: 25px;
   max-width: 350px;
   display: flex;
+  transition: opacity 0.5s linear;
+  align-items: center;
 }
 
 div.task svg {
-  height: 20px;
-  margin-right: 5px;
+  height: 22px;
+  margin-right: 6px;
+  fill: #ffffffc7;
+}
+
+div.task.done {
+  opacity: 0.4;
+  border-style: none;
+}
+
+div.task span {
+  position: relative;
+  
+}
+
+div.task span:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ffffffc7;
+  position: absolute;
+  top: 10px;
+  transition: width .3s linear;
+}
+
+div.task-name {
+  flex-grow:1;
+}
+
+div.task.done span:before{
+  width: 100%;
+}
+
+button.trash-button{
+  background: none;
+  border: none;
+  cursor: pointer;
+
+}
+
+button.trash-button svg {
+  fill: #ffffffcd;
+  height: 14px;
 }

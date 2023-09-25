@@ -47,6 +47,9 @@ function App() {
     else if (percentage === 0){
       return "Come on! Try to do at least one task today!"
     }
+    else if (numberTotalTasks === 0){
+      return "Add your first task!"
+    }
     return "Keep it going!"
   }
 

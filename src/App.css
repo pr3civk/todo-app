@@ -152,3 +152,20 @@ h1 {
 h2 {
   font-size: 20px;
 }
+
+div.my-footer{
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 50px;
+  font-size: 10px;
+  width:100%;
+  height: 55px;
+}
+
+div.my-footer svg{
+  display: inline-flex;
+  height: 25px;
+  fill:#ffffffc7;
+  cursor:pointer;
+}

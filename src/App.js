@@ -2,6 +2,7 @@ import "./App.css";
 import TaskForm from "./TaskForm";
 import Task from "./Task";
 import { useEffect, useState } from "react";
+import Footer from "./Footer";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -65,6 +66,7 @@ function App() {
           onTrash={() => removeTask(index)}
         />
       ))}
+      <Footer/>
     </main>
   );
 }

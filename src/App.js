@@ -63,7 +63,7 @@ function App() {
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .typeString("Hello!, this is my first project!")
+              .typeString("Hello! this is my first project!")
               .pauseFor(2500)
               .deleteAll()
               .start()

@@ -80,8 +80,8 @@ div.task {
   border-radius: 10px;
   padding: 5px;
   margin-top: 6px;
-  margin-left: 25px;
-  max-width: 350px;
+  margin-left: 15px;
+  max-width: 370px;
   display: flex;
   transition: opacity 0.5s linear;
   align-items: center;

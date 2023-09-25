@@ -9,14 +9,13 @@ html {
 }
 
 body {
-  background: linear-gradient(30deg,#1e1038,#241c4b,#630a2fd3,#761239);
+  background: linear-gradient(30deg, #1e1038, #241c4b, #630a2fd3, #761239);
   background-size: 240% 240%;
   animation: gradient-animation 28s ease infinite;
   color: #ffffffd2;
   font-size: medium;
   font-weight: bold;
   font-family: orbitron;
-  
 }
 
 @keyframes gradient-animation {
@@ -73,27 +72,42 @@ div.checkbox {
   cursor: pointer;
 }
 
-div.task {
-  background-color: #141038;
-  border-style: groove;
-  border-color: #09072c67;
-  border-radius: 10px;
-  padding: 5px;
-  margin-top: 6px;
-  margin-left: 15px;
-  max-width: 370px;
-  display: flex;
-  transition: opacity 0.5s linear;
-  align-items: center;
-  
+@media screen and (min-width: 410px) {
+  div.task {
+    background-color: #141038;
+    border-style: groove;
+    border-color: #09072c67;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 6px;
+    margin-left: 15px;
+    max-width: 370px;
+    display: flex;
+    transition: opacity 0.5s linear;
+    align-items: center;
+  }
 }
- div.task:hover{
+
+@media screen and (max-width: 409px) {
+  div.task {
+    display: flex;
+    background-color: #141038;
+    border-style: groove;
+    border-color: #09072c67;
+    border-radius: 10px;
+    margin-left: 0px;
+    padding: 5px;
+    margin-top: 6px;
+    transition: opacity 0.5s linear;
+    align-items: center;
+  }
+}
+div.task:hover {
   background-color: #441c63;
   border-color: #e8e8e8f5;
   height: 42px;
   align-items: center;
-  
- }
+}
 
 div.task svg {
   height: 22px;
@@ -105,7 +119,6 @@ div.task.done {
   opacity: 0.4;
   border-style: none;
 }
-
 
 div.task span {
   position: relative;
@@ -141,7 +154,8 @@ button.trash-button svg {
   height: 14px;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -153,19 +167,19 @@ h2 {
   font-size: 20px;
 }
 
-div.my-footer{
-  position:absolute;
+div.my-footer {
+  position: absolute;
   bottom: 0;
   left: 0;
   margin-left: 50px;
   font-size: 10px;
-  width:100%;
+  width: 100%;
   height: 55px;
 }
 
-div.my-footer svg{
+div.my-footer svg {
   display: inline-flex;
   height: 25px;
-  fill:#ffffffc7;
-  cursor:pointer;
+  fill: #ffffffc7;
+  cursor: pointer;
 }

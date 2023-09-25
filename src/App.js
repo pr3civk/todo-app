@@ -53,7 +53,7 @@ function App() {
   return (
     <main>
       <h1>
-        {numberCompletedTasks}/{numberTotalTasks} Tasks completed
+        {numberCompletedTasks}/{numberTotalTasks} Tasks complete
       </h1>
       <h2>{getMessage()}</h2>
       <TaskForm onAdd={addTask} />

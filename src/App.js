@@ -32,7 +32,7 @@ function App() {
 
   function removeTask(indexToRemove) {
     setTasks((previous) => {
-      return previous.filter((taskObject, index) => index !== indexToRemove);
+      return previous.filter((removeTask, index) => index !== indexToRemove);
     });
   }
 
@@ -43,14 +43,12 @@ function App() {
     const percentage = (numberCompletedTasks / numberTotalTasks) * 100;
     if (percentage === 100) {
       return "You did it! It's time to relax!";
+    } else if (percentage === 0) {
+      return "Come on! Try to do at least one task today!";
+    } else if (numberTotalTasks === 0) {
+      return "Add your first task!";
     }
-    else if (percentage === 0){
-      return "Come on! Try to do at least one task today!"
-    }
-    else if (numberTotalTasks === 0){
-      return "Add your first task!"
-    }
-    return "Keep it going!"
+    return "Keep it going!";
   }
 
   return (

@@ -85,7 +85,15 @@ div.task {
   display: flex;
   transition: opacity 0.5s linear;
   align-items: center;
+  
 }
+ div.task:hover{
+  background-color: #441c63;
+  border-color: #e8e8e8f5;
+  height: 42px;
+  align-items: center;
+  
+ }
 
 div.task svg {
   height: 22px;
@@ -97,6 +105,7 @@ div.task.done {
   opacity: 0.4;
   border-style: none;
 }
+
 
 div.task span {
   position: relative;

@@ -3,6 +3,7 @@ import TaskForm from "./TaskForm";
 import Task from "./Task";
 import { useEffect, useState } from "react";
 import Footer from "./Footer";
+import Typewriter from "typewriter-effect";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -58,6 +59,24 @@ function App() {
         {numberCompletedTasks}/{numberTotalTasks} Tasks completed
       </h1>
       <h2>{getMessage()}</h2>
+      <h5>
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+              .typeString("Hello!, this is my first project!")
+              .pauseFor(2500)
+              .deleteAll()
+              .start()
+              .typeString("I know that's a boring todo list everybody does")
+              .pauseFor(2500)
+              .deleteAll()
+              .typeString("But I hope You're gonna like it!")
+              .pauseFor(2500)
+              .deleteAll()
+              .typeString("Have a good day and enjoy!");
+          }}
+        />
+      </h5>
       <TaskForm onAdd={addTask} />
       {tasks.map((task, index) => (
         <Task
@@ -66,7 +85,7 @@ function App() {
           onTrash={() => removeTask(index)}
         />
       ))}
-      <Footer/>
+      <Footer />
     </main>
   );
 }

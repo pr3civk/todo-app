@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: linear-gradient(30deg,#020024,#241c4b,#630a2fd3,#761239);
+  background: linear-gradient(30deg,#1e1038,#241c4b,#630a2fd3,#761239);
   background-size: 240% 240%;
   animation: gradient-animation 28s ease infinite;
   color: #ffffffd2;
@@ -74,9 +74,9 @@ div.checkbox {
 }
 
 div.task {
-  background-color: #4b133f;
+  background-color: #141038;
   border-style: groove;
-  border-color: #29082267;
+  border-color: #09072c67;
   border-radius: 10px;
   padding: 5px;
   margin-top: 6px;

@@ -10,6 +10,7 @@ export default function Footer() {
         </svg>
       </a>
       <footer>@pr3civk</footer>
+      
     </div>
   );
 }

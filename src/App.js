@@ -30,7 +30,7 @@ function App() {
       newTasks[taskIndex].done = newDone;
       return newTasks;
     });
-  }
+  }a
 
   function removeTask(indexToRemove) {
     setTasks((previous) => {
